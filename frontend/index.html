@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Arduino IoT Dashboard</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="max-w-5xl mx-auto p-6 space-y-8">
+        <h1 class="text-3xl font-bold text-indigo-400 text-center">
+            Arduino - Raspberry - FastAPI
+        </h1>
+
+        <!-- LED CONTROL -->
+        <section class="card">
+            <h2 class="section-title">Control LED</h2>
+
+            <div class="flex items-center gap-6">
+                <div id="led-indicator" class="led-off"></div>
+
+                <div class="space-x-4">
+                    <button id="btn-led-on" class="btn btn-green">Encender</button>
+                    <button id="btn-led-off" class="btn btn-red">Apagar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SENSORES -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- DHT11 -->
+            <div class="card">
+                <h2 class="section-title">Temperatura y Humedad</h2>
+
+                <p>🌡 Temp: <span id="temp">0</span> °C</p>
+                <p>💧 Humedad: <span id="hum">0</span> %</p>
+
+                <button id="btn-dht" class="btn btn-indigo mt-4">
+                    Leer DHT11
+                </button>
+
+                <ul id="dht-history" class="history"></ul>
+            </div>
+
+            <!-- HC-SR04 -->
+            <div class="card">
+                <h2 class="section-title">Distancia (HC-SR04)</h2>
+
+                <p>📏 Distancia: <span id="dist">0</span> cm</p>
+
+                <button id="btn-dist" class="btn btn-indigo mt-4">
+                    Medir Distancia
+                </button>
+
+                <ul id="dist-history" class="history"></ul>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
