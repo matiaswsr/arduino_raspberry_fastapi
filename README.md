@@ -123,7 +123,7 @@ Este proyecto demuestra que, con herramientas accesibles, buenas prácticas y cu
 - Módulo con Sensor DHT11 (temperatura y humedad)  
 - Sensor ultrasónico HC-SR04  
 - Cables Dupont macho-macho
-- 
+
 <img width="1569" height="753" alt="Diagrama" src="https://github.com/user-attachments/assets/3cf07e9e-cb96-4ef4-96eb-d6d1f112fcaa" />
 
 ![20260113_190944](https://github.com/user-attachments/assets/92332985-9095-448b-b623-e22e2cd41b6c)
